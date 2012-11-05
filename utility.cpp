@@ -9,7 +9,7 @@
 #include "utility.h"
 #include <OpenGL/OpenGL.h>
 #include <OpenGL/gl.h>
-
+#include <cmath>
 
 namespace DemoAttributes{
     
@@ -31,6 +31,17 @@ namespace DemoAttributes{
         ++itr;
         if(itr != p.end()) z = *itr;
         
+    }
+    
+    float pointDistance(const Point3f& p1, const Point3f& p2){
+        float dx = p2.x - p1.x;
+        float dy = p2.y - p1.y;
+        float dz = p2.z - p1.z;
+        return std::sqrt( dx*dx + dy*dy + dz*dz);
+    }
+    
+    Point3f midpoint(const Point3f& p1, const Point3f& p2){
+        return {(p1.x+p2.x)/2.0f, (p1.y+p2.y)/2.0f};
     }
     
 }

@@ -24,10 +24,12 @@ namespace DemoAttributes {
     //utils
     struct Point3f{
         float x , y , z;
-        Point3f(const std::initializer_list<float>& p);
+        Point3f(const std::initializer_list<float>& p = {});
     };
     
     void drawLine(float length);
     
+    float pointDistance(const Point3f& p1, const Point3f& p2);
+    Point3f midpoint(const Point3f& p1, const Point3f& p2);
 }
 #endif

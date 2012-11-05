@@ -15,6 +15,8 @@ namespace Demo {
     void renderFractalTree(const int MAX_DEPTH,
                            const float RELATIVE_ANGLE_DEG,
                            const float BRANCH_LENGTH_DECREASE_FACTOR);
+    
+    void renderSierpinskiTriangle(const int MAX_DEPTH);
 }
 
 #endif
